@@ -1,5 +1,6 @@
 using UnityEngine;
 
+// CLASSE HERO USATA PER ISTANZIARE
 [System.Serializable] public class Hero
 {
     [SerializeField] private string name;
@@ -9,6 +10,7 @@ using UnityEngine;
     [SerializeField] private ELEMENT weakness;
     [SerializeField] private Weapon weapon;
 
+    // METODO COSTRUTTORE
     public Hero(string name, int hp, Stats baseStats, ELEMENT resistance, ELEMENT weakness, Weapon weapon)
     {
         this.name = name;
@@ -19,7 +21,7 @@ using UnityEngine;
         this.weapon = weapon;
     }
 
-    //GETTER
+    // GETTER
     public string GetName() => name;
     public int GetHP() => hp;
     public Stats GetBaseStats() => baseStats;
@@ -27,7 +29,7 @@ using UnityEngine;
     public ELEMENT GetWeakness() => weakness;
     public Weapon GetWeapon() => weapon;
 
-    //SETTER
+    // SETTER
     public void SetName(string name)
     {
         this.name = name;
@@ -53,7 +55,7 @@ using UnityEngine;
         this.weapon = weapon;
     }
 
-    //FUNCTIONS
+    // FUNZIONI PER INCREMENTO/DECREMENTO DELLA SALUTE
     public void AddHP(int amount)
     {
         SetHP(hp + amount);
@@ -64,6 +66,7 @@ using UnityEngine;
         AddHP(-damage);
     }
 
+    // FUNZIONE CONTROLLA SE L'EROE E' VIVO (HP > 0)
     public bool IsAlive()
     {
         return hp > 0 ? true : false;

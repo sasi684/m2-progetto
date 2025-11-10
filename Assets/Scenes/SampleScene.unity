@@ -471,7 +471,7 @@ MonoBehaviour:
     weapon:
       name: Shield
       dmgType: 0
-      elem: 2
+      elem: 0
       bonusStats:
         atk: 10
         def: 30
@@ -492,7 +492,7 @@ MonoBehaviour:
       aim: 65
       eva: 40
     resistance: 1
-    weakness: 3
+    weakness: 0
     weapon:
       name: Staff
       dmgType: 1

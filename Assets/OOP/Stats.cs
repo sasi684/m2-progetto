@@ -1,3 +1,4 @@
+// STRUCT CONTENENTE TUTTE LE POSSIBILI STATS DI UN GIOCATORE O UN'ARMA
 [System.Serializable] public struct Stats
 {
     public int atk;
@@ -8,6 +9,7 @@
     public int aim;
     public int eva;
 
+    // METODO COSTRUTTORE
     public Stats(int atk, int def, int res, int spd, int crt, int aim, int eva)
     {
         this.atk = atk;
@@ -19,6 +21,7 @@
         this.eva = eva;
     }
 
+    // FUNZIONA SOMMA DI DUE STATS (PRINCIPALMENTE USATA PER SOMMARE STATS DI HERO E WEAPON ASSOCIATA)
     public static Stats Sum(Stats stats1, Stats stats2)
     {
         Stats statsSum = new Stats

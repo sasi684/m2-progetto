@@ -1,7 +1,10 @@
 using UnityEngine;
 
+// CLASSE WEAPON UTILIZZATA PER ISTANZIARE LE ARMI DI CIASCUN OGGETTO DELLA CLASSE HERO
 [System.Serializable] public class Weapon
 {
+    // OGNI ARMA PUO' EFFETTUARE DANNO FISICO O MAGICO.
+    // IN BASE AL TIPO DI DANNO, VERRA' USATA UNA STATS DIVERSA DEL DEFENDER PER IL CALCOLO DEI DANNI
     public enum DAMAGE_TYPE
     {
         PHYSICAL = 0,
@@ -13,6 +16,7 @@ using UnityEngine;
     [SerializeField] private ELEMENT elem;
     [SerializeField] private Stats bonusStats;
 
+    // METODO COSTRUTTORE
     public Weapon(string name, DAMAGE_TYPE dmgType, ELEMENT elem, Stats bonusStats)
     {
         this.name = name;
